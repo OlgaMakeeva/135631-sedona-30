@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+ 	<head>
+    	<meta charset="utf-8">
+    	<title>HTML Academy: Седона</title>
+ 	</head>
+<body>
+  	<header>
+  		<nav>
+  			<a href="index.html">
+  				<img src="https://via.placeholder.com/138x70" alt="Логотип Седона">
+  			</a>
+  			<ul>
+  				<li><a href="blank.html">Информация</a></li>
+  				<li><a href="blank.html">Фото и видео</a></li>
+  				<li><a href="blank.html">Карта штата</a></li>
+  				<li><a href="catalog.html">Гостиницы</a></li>
+  			</ul>
+  		</nav>
+  	</header>
+
+  	<main>
+  		<h1>Поиск гостиницы</h1>
+
+  		<section>
+  			<h2>Фильтр жилья</h2>
+
+  			<form method="get" action="https://echo.htmlacademy.ru/">
+      			<fieldset>
+      				<legend>Инфраструктура:</legend>
+      					<ul>
+      						<li>
+      							<input type="checkbox" name="pool" id="filter-pool" checked>
+      							<label for="filter-pool">Бассейн</label>
+      						</li>
+      						<li>
+      							<input type="checkbox" name="parking" id="filter-parking">
+      							<label for="filter-parking">Парковка</label>
+      						</li>
+      						<li>
+      							<input type="checkbox" name="wifi" id="filter-wifi">
+      							<label for="filter-wifi">WI-FI</label>
+      						</li>
+      					</ul>
+      			</fieldset>
+
+      			<fieldset>
+        			<legend>Тип жилья:</legend>
+        				<ul>
+      						<li>
+      							<input type="checkbox" name="hotel" id="filter-hotel" checked>
+      							<label for="filter-hotel">Гостиница</label>
+      						</li>
+      						<li>
+      							<input type="checkbox" name="motel" id="filter-motel" checked>
+      							<label for="filter-motel">Мотель</label>
+      						</li>
+      						<li>
+      							<input type="checkbox" name="apartments" id="filter-apartments" checked>
+      							<label for="filter-apartments">Апартаменты</label>
+      						</li>
+      					</ul>
+      			</fieldset>
+			
+	      		<fieldset>
+	      			<legend>Стоимость в сутки(р):</legend>
+	      			<p>
+	      				<input type="text" name="cost-min" value="От 0">
+	      				<input type="text" name="cost-max" value="До 3000">
+	      			</p>
+	      			<p>
+	      				<input type="range" min="0" max="3000" step="1" name="cost"> 
+	      			</p>
+	      			<p>
+	      				<button type="submit">Показать</button>
+	      			</p>
+	      		</fieldset>
+    		</form>
+  		</section>
+
+  		<section>
+  			<h2>Найденные варианты</h2>
+
+  			<div>
+  				<span>Найдено: 3</span>
+  				<span>Сортировка:</span>
+  				<ul>
+	  				<li><a href="#">По цене</a></li>
+	  				<li><a href="#">По типу</a></li>
+	  				<li><a href="#">По рейтингу</a></li>
+  				</ul>
+  			</div>
+  			<div>
+  				<ul>
+  					<li>
+  						<h3>AMARA RESORT&ampSPA</h3>
+  						<img src="https://via.placeholder.com/135x90" alt="amara">
+  						<p>
+  							<span>Гостиница</span>
+  							<span>От 4000 р.</span>
+  						</p>
+  						<p>
+  							<button type="button">Подробнее</button>
+  							<button type="button">Забронировать</button>
+  						</p>
+  					</li>
+  					<li>
+  						<h3>DESERT QUAIL INN</h3>
+  						<img src="https://via.placeholder.com/135x90" alt="desert">
+  						<p>
+  							<span>Мотель</span>
+  							<span>От 3000 р.</span>
+  						</p>
+  						<p>
+  							<button type="button">Подробнее</button>
+  							<button type="button">Забронировать</button>
+  						</p>
+  					</li>
+  					<li>
+  						<h3>VILLAS AT POCO DIABLO</h3>
+  						<img src="https://via.placeholder.com/135x90" alt="villas">
+  						<p>
+  							<span>Апартаменты</span>
+  							<span>От 2000 р.</span>
+  						</p>
+  						<p>
+  							<button type="button">Подробнее</button>
+  							<button type="button">Забронировать</button>
+  						</p>
+  					</li>
+  				</ul>
+  			</div>
+  		</section>
+  	</main>
+  	<footer>
+		<section>
+  			<h2>Контакты</h2>
+  			<p>#VISITSEDONA</p>
+  			<p>ТЕЛ: <a href="tel:+74956660166">+7 (495) 666-01-66</a></p>
+  		</section>
+		<section>
+  			<h2>Соцсети</h2>
+  			<ul>
+		     	<li>
+		        	<a href="#">Twitter</a>
+			    </li>
+			    <li>
+			        <a href="#">Facebook</a>
+			    </li>
+			    <li>
+			        <a href="#">YouTube</a>
+			    </li>
+			</ul>
+  		</section>
+  			<p>
+  				WEBSITE BY
+  				<a href="https://htmlacademy.ru/intensive/htmlcss">
+  					<img src="https://via.placeholder.com/115x41" alt="Логотип htmlacademy">
+  				</a>
+  			</p>  		
+  	</footer>
+</body>
+</html>
