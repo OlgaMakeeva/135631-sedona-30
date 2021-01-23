@@ -5,8 +5,160 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+  	<header>
+  		<nav>
+  			<a>
+  				<img src="https://via.placeholder.com/138x70" alt="Логотип Седона">
+  			</a>
+  			<ul>
+  				<li><a href="blank.html">Информация</a></li>
+  				<li><a href="blank.html">Фото и видео</a></li>
+  				<li><a href="blank.html">Карта штата</a></li>
+  				<li><a href="catalog.html">Гостиницы</a></li>
+  			</ul>
+  		</nav>
+   	</header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+  	<main>
+  		<h1>Аренда недвижимости в Седоне</h1>
+
+  		<aside>
+  			<img src="https://via.placeholder.com/1200x509" alt="Седона">
+  			<img src="https://via.placeholder.com/456x350" alt="Добро пожаловать">  
+   		</aside> <!--С этим блоком много сомнений, не до конца уверена, что подходит aside, может лучше в div, или что-то еще. И на счет самой надписи, делать ее одной картинкой или лучше тремя. И размеры изображений не целые числа (456.65), валидатор считает это за ошибку, как стоит указывать размеры в таких случаях?-->
+	
+  		<section>
+  			<p>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+  			<p>Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон!</p>
+  		</section> <!--Не уверена, что это смысловой блок section, не могу дать ему заголовок. Валидатор выдает предупредение по этому поводу.-->
+
+  		<section>
+  			<h2>Преимущество 1</h2>
+  			<ul>
+  				<li>
+  					<h3>Настоящий<br> городок</h3>
+  					<span>-№1-</span>
+  					<p>Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
+  				</li>
+  			</ul>
+  		</section>
+
+  		<div>
+  			<img src="https://via.placeholder.com/800x256" alt="Город">
+  		</div>
+
+  		<section>
+  			<h2>Особенности</h2>
+  			<ul>
+  				<li>
+  					<h3>Жильё</h3>
+  					<p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
+  				</li>
+  				<li>
+  					<h3>Еда</h3>
+  					<p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+  				</li>
+  				<li>
+  					<h3>Сувениры</h3>
+  					<p>Не только китайского, но и местного<br> производства!</p>
+  				</li>
+  			</ul>
+  		</section>
+
+  		<div>
+  			<img src="https://via.placeholder.com/800x256" alt="Мост дьявола">
+  		</div>
+
+  		<section>
+  			<h2>Преимущество 2</h2>
+  			<ul>
+  				<li>
+  					<h3>Там есть<br> мост дьявола</h3>
+  					<span>-№2-</span>
+  					<p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+  				</li>
+  			</ul>
+  		</section>
+
+  		<section>
+  			<h2>Преимущества 3, 4, 5</h2>
+  			<ul>
+  				<li>
+  					<h3>Небольшая<br> площадь</h3>
+  					<span>-№3-</span>
+  					<p>Все достопримечательности<br> находятся очень близко</p>
+  				</li>
+  				<li>
+  					<h3>Красивая<br> дорога</h3>
+  					<span>-№4-</span>
+  					<p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+  				</li>
+  				<li>
+  					<h3>Мало<br> туристов</h3>
+  					<span>-№5-</span>
+  					<p>Большинство едет в Гранд Каньон<br> и толпится там</p>
+  				</li>
+  			</ul>
+  		</section>
+
+  		<section>
+  			<h2>Поиск гостиницы в Седоне</h2>
+  			<p>Заинтересовались?</p>
+  			<p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+  			<button type="button">Поиск гостиницы в Седоне</button>
+  			<form action="https://echo.htmlacademy.ru/" method="post">
+  				<p>
+  					<label for="check-in">Дата заезда</label>
+      				<input id="check-in" type="date" name="check-in-date">
+      			</p>
+
+      			<p>
+      				<label for="departure">Дата выезда</label>
+      				<input id="departure" type="date" name="date-of-departure">
+      			</p>
+      			<p>
+      				<label for="adults">Взрослые:</label>
+      				<input id="adults" type="text" name="quantity">
+      				<label for="children">Дети:</label>
+      				<input id="children" type="text" name="quantity">
+      			</p>
+  				<button type="submit">Найти</button>
+  			</form> <!--Понимаю, что разметка формы неверная, но смогла только так. Не поняла, нужно ли вообще ее размечать на данном этапе, в чате несколько наставников писали, что не нужно. Но ведь она на макете видна по умолчанию.-->
+  		</section>
+
+  		<div>
+  			<img src="https://via.placeholder.com/1199x594" alt="Карта">
+  		</div>
+
+  		<footer>
+  			<section>
+  				<h2>Контакты</h2>
+  				<p>#VISITSEDONA</p>
+  				<p>ТЕЛ: <a href="tel:+74956660166">+7 (495) 666-01-66</a></p>
+  			</section>
+  			<section>
+  				<h2>Соцсети</h2>
+  				<ul>
+			     	<li>
+			        	<a href="#">Twitter</a>
+			      	</li>
+			      	<li>
+			       		 <a href="#">Facebook</a>
+			      	</li>
+			      	<li>
+			        	<a href="#">YouTube</a>
+			      	</li>
+			    </ul>
+  			</section>
+  			<p>
+  				WEBSITE BY
+  				<a href="https://htmlacademy.ru/intensive/htmlcss">
+  					<img src="https://via.placeholder.com/115x41" alt="Логотип htmlacademy">
+  				</a>
+  			</p>
+  		</footer>
+  	</main>
+  
 
   </body>
 </html>
