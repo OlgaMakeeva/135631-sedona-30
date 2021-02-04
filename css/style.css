@@ -1,0 +1,284 @@
+/*Fonts*/
+
+@font-face {
+ 	font-family: "PT Sans";
+  	src: url("../PTSans.woff2") format("woff2"),
+  		url("../PTSans.woff") format("woff");
+  	font-weight: 400; 
+  	font-style: normal;
+}
+
+@font-face {
+  	font-family: "PT Sans";
+  	src: url("../PTSans-Bold.woff2") format("woff2"),
+  		url("../PTSans-Bold.woff") format("woff");
+  	font-weight: 700; 
+ 	font-style: normal;
+}
+
+/* Variables */  /*Старалась придумать названия, чтоб при смене цвета не пришлось
+менять само название и можно было присваивать цвета в любой части сайта.
+Но пара имен получилась с active, hover - в данном макете они действительно
+используются с таким назначением, но можно ли так называть? Или в будущем
+цвет такого значения попросят присвоить например заголовку, и тогда будет странно 
+смотреться имя такого кастомного свойства у заголовка?*/
+
+:root {
+	--basic-accent-black: #000000;  /*чёрный подзаголовки*/
+	--basic-black: #333333;   /*чёрный текст*/
+	--basic-white: #FFFFFF;   /*белый*/
+
+	--basic-light: #81B3D2;    /*голубой*/
+	--basic-light-hover: #669EC0;   /*голубой кнопки и иконки при наведении*/ 
+	--basic-light-active: #5496BD;  /*голубой кнопки и иконки при нажатии*/
+
+	--basic-dark: #766357;   /*коричневый*/
+	--basic-dark-hover: #604E43;   /*коричневый кнопки при наведении*/
+	--basic-dark-active: #503E33;  /*коричневый кнопки при нажатии*/
+
+	--basic-neutral: #EEEEEE;   /*светло-серый фон преимуществ*/
+	--basic-light-neutral: #F2F2F2;  /*светло-серый фон поля ввода, края, рейтинга*/
+	--light-neutral-hover: #EBEBEB;   /*светло-серый наведение в форме*/
+	--light-neutral-focus: #E5E5E5;   /*светло-серый фокус в форме у бордера*/
+	--accent-dark-neutral: #6A6A6A;  /*темно-серый заблокированный чекбокс*/
+	--accent-extra-neutral: #666666;  /*темно-серый текст рейтинга*/
+	--accent-light-neutral: #CACACA;  /*светло-серый стрелки покой*/
+
+	--special: #A9A9A9;   /*светло-серый +- и календарь в покое*/
+	--special-dark: #231F20;  /*темный лого htmlacademy*/
+	--special-active: #BDBBBC;  /*серый лого htmlacademy нажатие, фон незагрузившейся картинки*/
+}
+
+/*Global*/
+
+body {
+	min-width: 1280px;
+	margin: 0;
+	padding: 0;
+  	font-family: "PTSans", "Arial", sans-serif;
+  	font-size: 14px;
+  	line-height: 21px;
+  	color: var(--basic-black);
+  	text-transform: uppercase;
+  	background-color: var(--basic-light-neutral);
+}
+
+a {
+  	text-decoration: none;
+}
+
+img {
+ 	max-width: 100%;
+  	height: auto;
+}
+
+/*Main Navigation*/
+
+.site-nav,
+.advantage-list,
+.features-list {
+	list-style: none;
+}
+
+.main-nav {
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--basic-accent-black);
+	background-color: var(--basic-white);
+}
+
+.site-nav a {
+	color: var(--basic-accent-black);
+}
+
+.site-nav a:hover {
+	color: var(--basic-light);
+}
+
+.site-nav a:focus {
+	opacity: 30%;
+}
+
+/*Main Image*/
+
+.main-img {
+	background-color: var(--special);
+}
+
+/*Slogan*/ 
+
+.slogan {
+	background-color: var(--basic-white);
+	text-align: center;
+}
+
+.slogan-title {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--basic-accent-black);
+}
+
+.slogan-text {
+	line-height: 26px;
+}
+
+/*Advantage*/
+
+.advantage {
+	background-color: var(--basic-light);
+	color: var(--basic-white);
+	text-align: center;
+}
+
+.advantage-title {
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.advantage-img {
+	background-color: var(--special);
+}
+
+/*Features*/
+
+.features {
+	background-color: var(--basic-white);
+}
+
+.features-title,
+.advantage-other-title {
+	font-size: 21px;
+	font-weight: 700;
+	color: var(--basic-accent-black);
+}
+
+ .wrapper {
+ 	text-align: center;
+ }
+
+/*Search*/
+
+.search {
+	background-color: var(--basic-white); 
+}
+
+.search-lead {
+	font-size: 30px;
+	line-height: 24px;
+	font-weight: 700;
+	color: var(--basic-accent-black);
+}
+
+.search-info {
+	line-height: 24px;
+}
+
+.button {
+	font-size: 21px;
+	text-transform: uppercase;
+	line-height: 26px;
+	border: none;
+	font-weight: 700;
+}
+
+.button-modal {
+	color: var(--basic-white);
+	background-color: var(--basic-dark);
+}
+
+.button-modal:hover {
+	background-color: var(--basic-dark-hover);
+}
+
+.button-modal:focus {
+	background-color: var(--basic-dark-active);
+}
+
+.button-search {
+	color: var(--basic-white);
+	background-color: var(--basic-light);
+}
+
+.button-search:hover {
+	background-color: var(--basic-light-hover);
+}
+
+.button-search:focus {
+	background-color: var(--basic-light-active);
+}
+
+.button-modal:focus .button-text,
+.button-search:focus .button-text {
+	mix-blend-mode: normal;
+	opacity: 0.3;
+}
+
+.search-date,
+.quantity,
+.search-date-input,
+.quantity-input {
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--basic-accent-black);
+	text-transform: uppercase;
+	border: none;
+	background-color: var(--basic-light-neutral);
+}
+
+.quantity-input {
+	text-align: center;
+}
+
+.search-date-input:hover,
+.quantity-input:hover {
+	background-color: var(--light-neutral-hover); 
+} 
+
+.search-date-input:focus,
+.quantity-input:focus {
+	background-color: var(--basic-white); 
+	border: 3px;
+	border-color: var(--light-neutral-focus);
+} 
+
+/*Map*/
+
+.map {
+	background-color: var(--special-active);
+}
+
+/*Footer*/
+
+.main-footer {
+	background-color: var(--basic-white);
+	color: var(--basic-accent-black);
+}
+
+.footer-contacts {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.footer-phone a {
+	color: var(--basic-accent-black);
+}
+
+.footer-social {
+	text-align: center;
+}
+
+.social-list {
+	list-style: none;
+}
+
+.footer-copyright {
+	line-height: 26px;
+	color: var(--basic-accent-black);
+}
+
+
+
+
+
