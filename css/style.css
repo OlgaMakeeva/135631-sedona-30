@@ -95,8 +95,12 @@ img {
 	color: var(--basic-light);
 }
 
-.site-nav a:focus {
+.site-nav a:active {
 	opacity: 30%;
+}
+
+.site-nav-link-visited a:visited {
+	color: var(--basic-dark);
 }
 
 /*Main Image*/
@@ -246,6 +250,174 @@ img {
 
 .map {
 	background-color: var(--special-active);
+}
+
+/*Catalog*/
+
+.catalog-img {
+	background-color: var(--special-active);
+}
+
+.catalog {
+	background-color: var(--basic-white);
+}
+
+/*Filters*/
+
+.filter {
+	color: var(--basic-white);
+}
+
+.filter legend {
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.filter ul {
+	list-style: none;
+}
+
+ .filter-option label {
+ 	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+ }
+
+ .filter-cost input {
+ 	background: transparent;
+ 	color: var(--basic-white);
+ 	text-transform: uppercase;
+ }
+
+.filter-button button {
+	background: transparent;
+ 	color: var(--basic-white);
+ 	text-transform: uppercase;
+ 	border: 2px solid var(--basic-white);
+}
+
+.filter-button button:hover {
+	background-color: var(--basic-white);
+	color: var(--basic-accent-black);
+}
+
+/*Sort*/
+
+.sort span:nth-child(1) {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: var(--basic-accent-black);
+}
+ 
+.sort span:nth-child(2),
+.sort-list a {
+	font-size: 12px;
+	line-height: 18px;
+	color: var(--basic-accent-black);
+}
+
+.sort-list {
+	list-style: none;
+}
+
+.sort-list a {
+	opacity: 30%;
+	text-decoration: 1px underline;
+	text-decoration-color: var(--basic-light);
+	text-decoration-style: dashed;
+}
+
+.sort-list a:hover {
+	opacity: 100%;
+	color: var(--basic-light);
+} 
+
+.sort-list a:active,
+.sort-list a:focus {
+	opacity: 100%;
+	color: var(--basic-accent-black);
+	text-decoration: none;
+}
+/*  не смогла сделать, чтоб посещенная ссылка меняла цвет,
+тогда перестает работать a:activ; 
+.sort-list a:visited {
+	opacity: 100%;
+	color: var(--basic-light);
+	text-decoration: none;
+}
+*/
+
+/*Catalog Hotels*/
+
+.catalog-hotels-img {
+	background-color: var(--special-active);
+}
+
+.catalog-list {
+	list-style: none;
+}
+
+.catalog-item a {
+	color: var(--basic-accent-black);
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+.catalog-item a:hover {
+	color: var(--basic-light);
+}
+
+.catalog-item a:active {
+	color: var(--basic-accent-black);
+	opacity: 30%;
+}
+
+.catalog-hotels-button-more,
+.catalog-hotels-button-book {
+	text-transform: uppercase;
+	font-weight: 700; 
+	color: var(--basic-white);
+	border: none;
+}
+
+.catalog-hotels-button-more {
+	background-color: var(--basic-light);
+}
+
+.catalog-hotels-button-more:hover {
+	background-color: var(--basic-light-hover);
+}
+
+.catalog-hotels-button-more:active {
+	background-color: var(--basic-light-active);
+}
+
+.catalog-hotels-button-more:active .button-text {
+	opacity: 30%;
+}
+
+.catalog-hotels-button-book {
+	background-color: var(--basic-dark);
+}
+
+.catalog-hotels-button-book:hover {
+	background-color: var(--basic-dark-hover);
+}
+
+.catalog-hotels-button-book:active {
+	background-color: var(--basic-dark-active)
+}
+
+.catalog-hotels-button-book:active .button-text {
+	opacity: 30%;
+}
+
+.rating-text {
+	background-color: var(--basic-light-neutral);
+	color: var(--accent-extra-neutral);
 }
 
 /*Footer*/
