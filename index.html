@@ -13,34 +13,35 @@
   </head>
   <body class="page-body">
   	<header class="main-header">
-  	
       <nav class="main-nav">
           <a class="main-logo">
     				<img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
     			</a>
-    			<ul class="site-nav">
-    				<li class="site-nav-link"><a href="blank.html">Информация</a></li>
-    				<li class="site-nav-link"><a href="blank.html">Фото и видео</a></li>
-    				<li class="site-nav-link"><a href="blank.html">Карта штата</a></li>
-    				<li class="site-nav-link"><a href="catalog.html">Гостиницы</a></li>
-    			</ul>
+    			<div class="main-nav-wrapper">
+            <ul class="site-nav">
+      				<li class="site-nav-link"><a href="blank.html">Информация</a></li>
+      				<li class="site-nav-link"><a href="blank.html">Фото и видео</a></li>
+      				<li class="site-nav-link"><a href="blank.html">Карта штата</a></li>
+      				<li class="site-nav-link"><a href="catalog.html">Гостиницы</a></li>
+    			 </ul>
+          </div>
   		</nav>
    	</header>
 
   	<main class="container">
   		<h1 hidden class="title-hidden">Аренда недвижимости в Седоне</h1>
 
-  		<div class="main-img">
-  			<img src="img/background-index.jpg" width="1200" height="509" alt="Седона">
-  			<img src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать">  
-   		</div> 
+  			<div class="main-img">
+          <img class="main-img-welcome" src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать">
+          <img class="main-img-fon" src="img/background-index.jpg" width="1200" height="509" alt="Седона">
+        </div>   		
 	
   		<section class="slogan">
   			<p class="slogan-title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
   			<p class="slogan-text">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон!</p>
   		</section> 
 
-  		<section class="advantage">
+  		<section class="advantage advantage-grid-1">
   			<h2 hidden class="title-hidden">Преимущество 1</h2>
   			<ul class="advantage-list">
   				<li class="advantage-item">
@@ -49,41 +50,35 @@
   					<p class="advantage-text">Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
   				</li>
   			</ul>
+        <div class="advantage-img">
+        <img src="img/advantage-1.jpg" width="800" height="256" alt="Город">
+      </div>
   		</section>
-  		<div class="advantage-img">
-  			<img src="img/advantage-1.jpg" width="800" height="256" alt="Город">
-  		</div>
+  		
 
   		<section class="features">
   			<h2 hidden class="title-hidden">Особенности</h2>
   			<ul class="features-list">
   				<li class="features-item">
-  					<div class="wrapper">
-              <h3 class="features-title">Жильё</h3>
+              <h3 class="features-title house">Жильё</h3>
   					 <p class="features-text">Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
-            </div>
   				</li>
   				<li class="features-item">
-  					<div class="wrapper">
               <h3 class="features-title">Еда</h3>
     					<p class="features-text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
-            </div>
   				</li>
   				<li class="features-item">
-  					<div class="wrapper">
               <h3 class="features-title">Сувениры</h3>
     					<p class="features-text">Не только китайского, но и местного<br> производства!</p>
-            </div>
   				</li>
   			</ul>
   		</section>
 
-  		<div class="advantage-img">
-  			<img src="img/advantage-2.jpg" width="800" height="256" alt="Мост дьявола">
-  		</div>
-
-  		<section class="advantage">
+  		<section class="advantage advantage-grid-2">
   			<h2 hidden class="title-hidden">Преимущество 2</h2>
+        <div class="advantage-img">
+        <img src="img/advantage-2.jpg" width="800" height="256" alt="Мост дьявола">
+      </div>
   			<ul class="advantage-list">
   				<li class="advantage-item">
   					<h3 class="advantage-title">Там есть<br> мост дьявола</h3>
@@ -95,82 +90,93 @@
 
   		<section class="advantage-other">
   			<h2 hidden class="title-hidden">Преимущества 3, 4, 5</h2>
-  			<ul class="advantage-list">
-  				<li class="advantage-item">
-  					<div class="wrapper">
+  			<ul class="advantage-list-other">
+  				<li class="advantage-item-other">
               <h3 class="advantage-other-title">Небольшая<br> площадь</h3>
     					<span>-№3-</span>
     					<p class="advantage-other-text">Все достопримечательности<br> находятся очень близко</p>
-            </div>
   				</li>
-  				<li class="advantage-item">
-  					<div class="wrapper">
+  				<li class="advantage-item-other">
               <h3 class="advantage-other-title">Красивая<br> дорога</h3>
     					<span>-№4-</span>
     					<p class="advantage-other-text">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
-            </div>
   				</li>
-  				<li class="advantage-item">
-  					<div class="wrapper">
+  				<li class="advantage-item-other">
               <h3 class="advantage-other-title">Мало<br> туристов</h3>
     					<span>-№5-</span>
     					<p class="advantage-other-text">Большинство едет в Гранд Каньон<br> и толпится там</p>
-            </div>
   				</li>
   			</ul>
   		</section>
 
   		<section class="search">
   			<h2 hidden class="title-hidden">Поиск гостиницы в Седоне</h2>
-  			<div class="wrapper">
-          <p class="search-lead">Заинтересовались?</p>
-    			<p class="search-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-    			<button class=" button button-modal" type="button"><span class="button-text">Поиск гостиницы в Седоне</span></button>
-    			<form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-    				<p class="search-item">
-    					<label class="search-date" for="check-in">Дата заезда</label>
-        			<input class="search-date-input" id="check-in" type="text" name="check-in-date" value="24 апреля 2017">
-        		</p>
 
-        		<p class="search-item">
-        			<label class="search-date" for="departure">Дата выезда</label>
-        			<input class="search-date-input" id="departure" type="text" name="date-of-departure" value="4 июля 2017">
-        		</p>
-        		<p class="search-item">
-        			<label class="quantity" for="adults">Взрослые:</label>
-        			<input class="quantity-input" id="adults" type="text" name="quantity" value="2">
-        			<label class="quantity" for="children">Дети:</label>
-        			<input class="quantity-input" id="children" type="text" name="quantity" value="0">
-        		</p>
-    				<button class="button button-search" type="submit"><span class="button-text">Найти</span></button>
-    			</form> 
-      </div>
-  		</section>
+          <div class="search-wrapper">
+            <p class="search-lead">Заинтересовались?</p>
+    			  <p class="search-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          </div>
 
-  		<div class="map">
-  			<img src="img/map.png" width="1199" height="594" alt="Карта">
-  		</div>
+    			
+            <button class=" button button-modal" type="button"><span class="button-text">Поиск гостиницы в Седоне</span></button>
+<div class="search-form-wrapper">
+      			<form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+      				<p class="search-item">
+      					<label class="search-date" for="check-in">Дата заезда</label>
+          			<input class="search-date-input" id="check-in" type="text" name="check-in-date" value="24 апреля 2017">
+          		</p>
+          		<p class="search-item">
+          			<label class="search-date" for="departure">Дата выезда</label>
+          			<input class="search-date-input" id="departure" type="text" name="date-of-departure" value="4 июля 2017">
+          		</p>
+          		<p class="search-item">
+          			<label class="quantity" for="adults">Взрослые:</label>
+          			<input class="quantity-input" id="adults" type="text" name="quantity" value="2">
+          			<label class="quantity" for="children">Дети:</label>
+          			<input class="quantity-input" id="children" type="text" name="quantity" value="0">
+          		</p>
+      				<button class="button button-search" type="submit"><span class="button-text">Найти</span></button>
+      			</form> 
+        </div>
+
+        <div class="map">
+          <img src="img/map.png" width="1199" height="594" alt="Карта">
+        </div>
+    		</section>
+
+  		
   	</main>
 
   		<footer class="main-footer">
-  			<section class="footer-contacts">
-  				<h2 hidden class="title-hidden">Контакты</h2>
-          	<p class="footer-text">#VISITSEDONA</p>
-    				<p class="footer-phone" >ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
-  			</section>
-  			<section class="footer-social">  <!--Мы ведь еще не подключаем и не стилизуем иконки SVG?-->
-  				<h2 hidden class="title-hidden">Соцсети</h2>
-  				<ul class="social-list">
-			     	<li class="social-item">
-			        	<a class="social-button" href="#">Twitter</a>
-			      	</li>
-			      	<li class="social-item">
-			       		 <a  class="social-button" href="#">Facebook</a>
-			      	</li>
-			      	<li class="social-item">
-			        	<a  class="social-button" href="#">YouTube</a>
-			      	</li>
-			    </ul>
+        <section class="footer-contacts">
+          <h2 hidden class="title-hidden">Контакты</h2>
+            <p class="footer-text">#VISITSEDONA</p>
+            <p class="footer-phone" >ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+        </section>
+        <section class="footer-social"> 
+          <h2 hidden class="title-hidden">Соцсети</h2>
+
+          <ul class="social-list">
+            <li class="social-item">
+                <a class="social social-tw" href="#"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+</svg></a>
+              </li>
+              <li class="social-item">
+                 <a  class="social social-fb" href="#"><svg width="12" height="22" viewBox="0 0 12 22" fill="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+</svg></a>
+              </li>
+              <li class="social-item">
+                
+                  <a  class="social social-yout" href="#">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+                    </svg>
+                  </a>                
+              </li>
+          </ul>
+
   			</section>
   			<p class="footer-copyright">
   				WEBSITE BY
