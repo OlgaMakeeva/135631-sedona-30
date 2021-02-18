@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
  	<head>
-    	<meta charset="utf-8">
-    	<title>HTML Academy: Седона</title>
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="css/style.css">  
-    	<link rel="icon" href="favicon.ico">
-    	<link rel="icon" href="img/favicon-152.svg" type="image/svg+xml">
-    	<link rel="apple-touch-icon" href="img/favicon-180.png">
-    	<link rel="manifest" href="manifest.webmanifest">
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon-152.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
  	</head>
-<body class="page-body">
-  <header class="main-header">
+  <body class="page-body">
+    <header class="main-header">
   	<nav class="main-nav">
   		<a  class="main-logo" href="index.html">
   			<img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
@@ -25,16 +25,18 @@
   		</nav>
   	</header>
 
-  	<main class="container">
+  	<main class="page-catalog container">
   		<h1 hidden>Поиск гостиницы</h1>
 
-  		<section class="filters">
-  			<h2 hidden>Фильтр жилья</h2> 
-  			<div class="catalog-img">
-          <img src="img/background-catalog.jpg" width="1200" height="210" alt="Седона">
-        </div>
-  			<form class="filter" method="get" action="https://echo.htmlacademy.ru/"> 
-      			<fieldset>
+      <div class="catalog-img">
+      
+    		<section class="filters">
+    			<h2 hidden>Фильтр жилья</h2> 
+        
+  			   <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
+
+            <div class="grid-infr">
+      			 <fieldset>
       				<legend>Инфраструктура:</legend>
       					<ul>
       						<li class="filter-option">
@@ -51,7 +53,9 @@
       						</li>
       					</ul>
       			</fieldset>
+          </div>
 
+          <div class="grid-hause">
       			<fieldset>
         			<legend>Тип жилья:</legend>
         				<ul>
@@ -69,6 +73,9 @@
       						</li>
       					</ul>
       			</fieldset>
+          </div>
+
+          <div class="grid-price">
 	      		<fieldset>
 	      		<legend>Стоимость в сутки(р):</legend>  
 	      			<div class="filter-cost">
@@ -82,8 +89,11 @@
 	      				<button type="submit">Показать</button>
 	      			</div>
 	      		</fieldset>
+          </div>
+
     		</form>
   		</section>
+    </div>
 
   		<section class="catalog">
   			<h2 hidden>Найденные варианты</h2>
@@ -100,11 +110,13 @@
 
   			<div class="catalog-hotels">
   				<ul class="catalog-list">
+
   					<li class="catalog-item">
-  						<a href="#">AMARA RESORT&amp;SPA</a>  
   						<div class="catalog-hotels-img">
                 <img src="img/hotel-amara.jpg" width="135" height="90" alt="amara">
               </div>
+              <div class="catalog-hotels-info">
+                <a href="#">AMARA RESORT&amp;SPA</a>
   						<p>
   							<span>Гостиница</span>
   							<span>От 4000 р.</span>
@@ -113,44 +125,52 @@
   							<button class="catalog-hotels-button-more" type="button"><spun class="button-text">Подробнее</spun></button>
   							<button class="catalog-hotels-button-book" type="button"><spun class="button-text">Забронировать</spun></button>
   						</div>
+            </div>
               <div class="rating">
                 <p class="rating-text">
                   Рейтинг: 8,5
                 </p>
               </div>
   					</li>
+
   					<li class="catalog-item">
-  						<a href="#">DESERT QUAIL INN</a>
-  						<div class="catalog-hotels-img">
+              <div class="catalog-hotels-img">
                 <img src="img/hotel-desert.jpg" width="135" height="90" alt="desert">
               </div>
-  						<p>
-  							<span>Мотель</span>
-  							<span>От 3000 р.</span>
-  						</p>
-  						<div class="catalog-hotels-button">
-  							<button class="catalog-hotels-button-more" type="button"><spun class="button-text">Подробнее</spun></button>
-  							<button class="catalog-hotels-button-book" type="button"><spun class="button-text">Забронировать</spun></button>
-  						</div>
+              <div class="catalog-hotels-info">
+    						<a href="#">DESERT QUAIL INN</a>
+    						<p>
+    							<span>Мотель</span>
+    							<span>От 3000 р.</span>
+    						</p>
+    						<div class="catalog-hotels-button">
+    							<button class="catalog-hotels-button-more" type="button"><spun class="button-text">Подробнее</spun></button>
+    							<button class="catalog-hotels-button-book" type="button"><spun class="button-text">Забронировать</spun></button>
+    						</div>
+              </div>
               <div class="rating">
                 <p class="rating-text">
                   Рейтинг: 8,9
                 </p>
               </div>
   					</li>
+
   					<li class="catalog-item">
-  						<a href="#">VILLAS AT POCO DIABLO</a>
-  						<div class="catalog-hotels-img">
+              <div class="catalog-hotels-img">
                 <img src="img/hotel-villas.jpg" width="135" height="90" alt="villas">
               </div>
-  						<p>
-  							<span>Апартаменты</span>
-  							<span>От 2000 р.</span>
-  						</p>
-  						<div class="catalog-hotels-button">
-  							<button class="catalog-hotels-button-more" type="button"><spun class="button-text">Подробнее</spun></button>
-  							<button class="catalog-hotels-button-book" type="button"><spun class="button-text">Забронировать</spun></button>
-  						</div>
+              <div class="catalog-hotels-info">
+    						<a href="#">VILLAS AT POCO DIABLO</a>
+    						
+    						<p>
+    							<span>Апартаменты</span>
+    							<span>От 2000 р.</span>
+    						</p>
+    						<div class="catalog-hotels-button">
+    							<button class="catalog-hotels-button-more" type="button"><spun class="button-text">Подробнее</spun></button>
+    							<button class="catalog-hotels-button-book" type="button"><spun class="button-text">Забронировать</spun></button>
+    						</div>
+              </div>
               <div class="rating">
                 <p class="rating-text">
                   Рейтинг: 9,2
@@ -161,7 +181,8 @@
   			</div>
   		</section>
   	</main>
-  	     <footer class="main-footer">
+
+  	   <footer class="main-footer">
         <section class="footer-contacts">
           <h2 hidden class="title-hidden">Контакты</h2>
             <p class="footer-text">#VISITSEDONA</p>
