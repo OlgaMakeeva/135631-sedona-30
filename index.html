@@ -34,6 +34,7 @@
   			<div class="main-img">
           <img class="main-img-welcome" src="img/welcome.svg" width="456" height="350" alt="Добро пожаловать">
           <img class="main-img-fon" src="img/background-index.jpg" width="1200" height="509" alt="Седона">
+          <img class="main-img-shape" src="img/shape.png" width="1200" height="57">
         </div>   		
 	
   		<section class="slogan">
@@ -41,15 +42,13 @@
   			<p class="slogan-text">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон!</p>
   		</section> 
 
-  		<section class="advantage advantage-grid-1">
+  		<section class="advantage"> <!--Убрала эти advantage-grid-1 и grid-2, они были для зеркального отображения. Флексами оказалось это проще сделать)--> 
   			<h2 hidden class="title-hidden">Преимущество 1</h2>
-  			<ul class="advantage-list">
-  				<li class="advantage-item">
+  			<div class="advantage-content">
   					<h3 class="advantage-title">Настоящий<br> городок</h3>
   					<span>-№1-</span>
   					<p class="advantage-text">Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
-  				</li>
-  			</ul>
+  			</div>
         <div class="advantage-img">
         <img src="img/advantage-1.jpg" width="800" height="256" alt="Город">
       </div>
@@ -74,18 +73,16 @@
   			</ul>
   		</section>
 
-  		<section class="advantage advantage-grid-2">
+  		<section class="advantage">
   			<h2 hidden class="title-hidden">Преимущество 2</h2>
         <div class="advantage-img">
         <img src="img/advantage-2.jpg" width="800" height="256" alt="Мост дьявола">
       </div>
-  			<ul class="advantage-list">
-  				<li class="advantage-item">
+  			<div class="advantage-content">
   					<h3 class="advantage-title">Там есть<br> мост дьявола</h3>
   					<span>-№2-</span>
   					<p class="advantage-text">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
-  				</li>
-  			</ul>
+  			</div>
   		</section>
 
   		<section class="advantage-other">
@@ -118,8 +115,9 @@
           </div>
 
     			
-            <button class=" button button-modal" type="button"><span class="button-text">Поиск гостиницы в Седоне</span></button>
-<div class="search-form-wrapper">
+          <button class="button button-modal" type="button"><span class="button-text">Поиск гостиницы в Седоне</span></button>
+
+          <div class="search-form-wrapper">
       			<form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
       				<p class="search-item">
       					<label class="search-date" for="check-in">Дата заезда</label>
@@ -142,17 +140,19 @@
         <div class="map">
           <img src="img/map.png" width="1199" height="594" alt="Карта">
         </div>
-    		</section>
+    	</section>
 
   		
   	</main>
 
   		<footer class="main-footer">
+
         <section class="footer-contacts">
           <h2 hidden class="title-hidden">Контакты</h2>
             <p class="footer-text">#VISITSEDONA</p>
             <p class="footer-phone" >ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
         </section>
+        
         <section class="footer-social"> 
           <h2 hidden class="title-hidden">Соцсети</h2>
 
