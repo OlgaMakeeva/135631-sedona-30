@@ -168,23 +168,27 @@ img {
 /*Main Image*/
 
 .main-img {
+	background-image: url("../img/background-index.jpg");
 	background-color: var(--special);
 	width: 1200px;
 	height: 509px;
 }
 
+.main-img::before {
+	content: "";
+	background-image: url("../img/shape.png");
+	position: absolute;
+	width: 1200px;
+	height: 57px;
+  margin: auto;
+ 	top: 372px; left: 0; bottom: 0; right: 0;
+}
+
 .main-img-welcome {	
  	position: absolute;
  	margin: auto;
- 	top: -120px; left: 0; bottom: 0; right: 0; 	
+ 	top: -85px; left: 0; bottom: 0; right: 0; 	
 }
-
-.main-img-shape {
-	position: absolute;
-  margin: auto;
- 	top: 120px; left: 0; bottom: -215px; right: 0; 
-}
-
 
 /*Slogan*/ 
 
@@ -320,10 +324,6 @@ img {
 	padding: 55px;
 }
 
-.search-form {
-	
-
-}
 
 .button {
 	font-size: 21px;
@@ -434,21 +434,29 @@ height: 38px;
 }
 
 .filter {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	/*display: grid;
+	grid-template-columns: 1fr 1fr 1fr;*/
+	display: flex;
 	padding: 30px 70px;
+
 }
 
-.grid-infr {
-	width: 200px;
-	
+.filters {
+	height: 217px;
 }
 
-.grid-hause {
+.flex-infr {
+	width: 200px;	
+}
+
+.flex-hause {
   width: 200px;
 }
 
-
+.flex-price {
+	outline-offset: -5px;
+	padding-left: 345px;
+}
 
 .catalog {
 	background-color: var(--basic-white);
@@ -456,6 +464,13 @@ height: 38px;
 
 /*Filters*/
 
+.flex-infr fieldset,
+.flex-hause fieldset,
+.flex-price fieldset {
+	padding: 0;
+  margin: 0;
+  border: none;
+}
 
 .filter {
 	color: var(--basic-white);
@@ -465,6 +480,7 @@ height: 38px;
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: 700;
+	margin-bottom: 23px;
 }
 
 .filter ul {
@@ -475,19 +491,24 @@ height: 38px;
  	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
- }
+}
 
+.filter-option {
+	margin-bottom: 23px;
+}
  .filter-cost input {
  	background: transparent;
  	color: var(--basic-white);
  	text-transform: uppercase;
- }
+}
 
 .filter-button button {
 	background: transparent;
  	color: var(--basic-white);
  	text-transform: uppercase;
  	border: 2px solid var(--basic-white);
+ 	width: 137px;
+ 	height: 36px;
 }
 
 .filter-button button:hover {
