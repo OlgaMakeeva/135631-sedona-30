@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/style.min.css">  
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon-152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon-180.png">
@@ -33,7 +33,7 @@
     		<section class="filters">
     			<h2 class="visually-hidden">Фильтр жилья</h2> 
         
-  			   <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
+  			   <form class="filter" method="get" action="https://echo.htmlacademy.ru/" target="_blank">
 
             
       			 <fieldset class="flex-infr">
@@ -41,15 +41,15 @@
       					<ul class="filter-list">
       						<li class="filter-option">
       							<input class="visually-hidden filter-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
-      							<label for="filter-pool">Бассейн</label>
+      							<label for="filter-pool" tabindex="0">Бассейн</label>
       						</li>
       						<li class="filter-option">
       							<input class="visually-hidden filter-checkbox" type="checkbox" name="parking" id="filter-parking">
-      							<label for="filter-parking">Парковка</label>
+      							<label for="filter-parking" tabindex="0">Парковка</label>
       						</li>
       						<li class="filter-option">
       							<input class="visually-hidden filter-checkbox" type="checkbox" name="wifi" id="filter-wifi">
-      							<label for="filter-wifi">WI-FI</label>
+      							<label for="filter-wifi" tabindex="0">WI-FI</label>
       						</li>
       					</ul>
       			 </fieldset>
@@ -59,15 +59,15 @@
         				<ul class="filter-list">
       						<li class="filter-option">
       							<input class="visually-hidden filter-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-      							<label for="filter-hotel">Гостиница</label>
+      							<label for="filter-hotel" tabindex="0">Гостиница</label>
       						</li>
       						<li class="filter-option">
       							<input class="visually-hidden filter-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-      							<label for="filter-motel">Мотель</label>
+      							<label for="filter-motel" tabindex="0">Мотель</label>
       						</li>
       						<li class="filter-option">
       							<input class="visually-hidden filter-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
-      							<label for="filter-apartments">Апартаменты</label>
+      							<label for="filter-apartments" tabindex="0">Апартаменты</label>
       						</li>
       					</ul>
       			 </fieldset>
@@ -76,9 +76,9 @@
 	      		   <legend>Стоимость в сутки (р):</legend>  
 	      			  <div class="filter-cost">
                   <label for="filter-cost-min">От</label>
-	      				   <input type="text" name="cost-min" id="filter-cost-min" value="0">
+	      				   <input type="text" name="cost-min" id="filter-cost-min" placeholder="0">
                  <label for="filter-cost-max">До</label>
-	      				 <input type="text" name="cost-max" id="filter-cost-max" value="3000">
+	      				 <input type="text" name="cost-max" id="filter-cost-max" placeholder="3000">
 	      			</div>
 
 	      			<div class="range-controls">
@@ -109,10 +109,10 @@
 	  				<li class="sort-item"><button type="button"><spun class="sort-text">По типу</spun></button></li>
 	  				<li class="sort-item"><button type="button"><spun class="sort-text">По рейтингу</spun></button></li>
   				</ul>
-          <span class="sort-dir"><a class="dir" href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span class="sort-dir"><a class="dir" href="#" aria-label="Сортировка по возрастанию"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
 </svg></a>
-          <a class="dir dir-current" href="#"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="dir dir-current" href="#" aria-label="Сортировка по убыванию"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
 </svg></a></span>
   			</div>
@@ -199,7 +199,7 @@
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
             <p class="footer-text">#VISITSEDONA</p>
-            <p class="footer-phone" >ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+            <p class="footer-phone">ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
         </section>
         
         <section class="footer-social"> 
@@ -207,18 +207,18 @@
 
           <ul class="social-list">
             <li class="social-item">
-                <a class="social social-tw" href="#"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="social social-tw" href="#"><span class="visually-hidden">Twitter</span><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
 </svg></a>
               </li>
               <li class="social-item">
-                 <a  class="social social-fb" href="#"><svg width="12" height="22" viewBox="0 0 12 22" fill="white" xmlns="http://www.w3.org/2000/svg">
+                 <a  class="social social-fb" href="#"><span class="visually-hidden">Facebook</span><svg width="12" height="22" viewBox="0 0 12 22" fill="white" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
 </svg></a>
               </li>
               <li class="social-item">
                 
-                  <a  class="social social-yout" href="#">
+                  <a  class="social social-yout" href="#"><span class="visually-hidden">Youtobe</span>
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
                     </svg>
