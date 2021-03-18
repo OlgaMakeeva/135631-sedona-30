@@ -42,6 +42,8 @@
 	--special: #A9A9A9;   /*светло-серый +- и календарь в покое*/
 	--special-dark: #231F20;  /*темный лого htmlacademy*/
 	--special-active: #BDBBBC;  /*серый лого htmlacademy нажатие, фон незагрузившейся картинки*/
+	--basic-black-opacity: rgba(0, 0, 0, 0.3);  /*Черный с прозрачностью*/
+	--basic-shadow: rgba(0, 1, 1, 0.2);
 }
 
 /*Global*/
@@ -94,7 +96,7 @@ img {
 .main-header {
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--basic-shadow);
 }
 
 .main-nav {
@@ -176,7 +178,7 @@ img {
 	width: 1200px;
 	margin: 0 auto;
   padding: 0;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--basic-shadow);
 }
 
 /*Main Image*/
@@ -542,10 +544,6 @@ height: 38px;
 	background-color: var(--basic-white);
 }
 
-.search-item .quantity:last-of-type {
-	
-}
-
 .search-date {
 	width: 100px;
 	margin-right: -9px;
@@ -673,10 +671,6 @@ height: 38px;
 	align-items: baseline;
 }
 
-.filter-option input:focus {
-	outline: 2px dotted black;
-}
-
 .filter-checkbox + label::before {
 	content: "";
 	position: absolute;
@@ -684,6 +678,11 @@ height: 38px;
 	width: 23px;
 	height: 23px;
 	margin-left: -40px;
+}
+
+.filter-checkbox:focus-visible + label::before {
+	outline: 2px solid var(--basic-white);
+  outline-style: dotted;
 }
 
 .filter-checkbox:checked + label::before {
@@ -745,10 +744,7 @@ height: 38px;
 
 .filter-cost input::placeholder {
 	color: var(--basic-white);
-}
-
-.filter-cost input::-moz-placeholder {
-	color: var(--basic-white);
+	opacity: 1;
 }
 
 .filter-cost label:first-of-type {
@@ -824,6 +820,11 @@ height: 38px;
 	color: var(--basic-accent-black);
 }
 
+.filter-button button:focus-visible {
+	outline: 2px solid var(--basic-white);
+  outline-style: dotted;
+}
+
 /*Sort*/
 
 .catalog {
@@ -863,6 +864,7 @@ height: 38px;
 .sort-item {
   width: auto;
   padding-left: 6px;
+  margin-right: 30px;
 }
 
 .sort-dir {
@@ -871,7 +873,7 @@ height: 38px;
 }
 
 .dir {
-	width:11px;
+	width: 11px;
 	height: 10px;
 	padding-left: 10px;
 }
@@ -903,9 +905,15 @@ height: 38px;
 
 .sort-text {
 	text-decoration: underline;
-	text-decoration-style: dashed;
+	text-decoration-style: dotted;
 	text-decoration-color: var(--basic-light);
-	color: rgb(0, 0, 0, 0.3);
+	color: var(--basic-black-opacity);
+}
+
+.sort-text-current {
+	text-decoration: none;
+	color: var(--basic-light);
+	cursor: text;
 }
 
  .sort-text:hover {
@@ -917,23 +925,10 @@ height: 38px;
 	text-decoration: none;
 }
 
- .sort-text:active {
-	color: var(--basic-accent-black);
-	text-decoration: none;
-}
-
 .sort-text:disabled {
 	text-decoration: none;
 	color: var(--basic-light);
 }
-/*  не смогла сделать, чтоб посещенная кнопка меняла цвет
-
-.sort-text:visited {
-	opacity: 100%;
-	color: var(--basic-light);
-	text-decoration: none;
-}
-*/
 
 /*Catalog Hotels*/
 
@@ -1099,7 +1094,6 @@ height: 38px;
 	opacity: 30%;
 }
 
-
 /*Footer*/
 .footer {
 	background-color: var(--basic-white);
@@ -1109,6 +1103,7 @@ height: 38px;
   padding: 0;
   display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	box-shadow: 0px 5px 15px var(--basic-shadow);
 }
 
 .footer-main {
@@ -1128,12 +1123,14 @@ height: 38px;
 	margin: 0;
 	padding-left: 72px;
 }
+
 .footer-text {
 	margin: 0;
   padding-top: 23px;
   padding-left: 96px;
   padding-bottom: 10px;
 }
+
 .footer-phone {
 	padding-left: 53px;
   margin: 0;
