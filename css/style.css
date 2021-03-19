@@ -2,18 +2,18 @@
 
 @font-face {
  	font-family: "PTSans";
-  src: 	local("PTSans"),
-  			url("../fonts/PTSans.woff2") format("woff2"),
-  			url("../fonts/PTSans.woff") format("woff");
+  src: local("PTSans"),
+  		url("../fonts/PTSans.woff2") format("woff2"),
+  		url("../fonts/PTSans.woff") format("woff");
   font-weight: 400; 
   font-style: normal;
 }
 
 @font-face {
   font-family: "PTSans";
-  src: 	local("PTSans-Bold"),
-  			url("../fonts/PTSans-Bold.woff2") format("woff2"),
-  			url("../fonts/PTSans-Bold.woff") format("woff");
+  src: local("PTSans-Bold"),
+  		url("../fonts/PTSans-Bold.woff2") format("woff2"),
+  		url("../fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700; 
  	font-style: normal;
 }
@@ -43,6 +43,7 @@
 	--special-dark: #231F20;  /*темный лого htmlacademy*/
 	--special-active: #BDBBBC;  /*серый лого htmlacademy нажатие, фон незагрузившейся картинки*/
 	--basic-black-opacity: rgba(0, 0, 0, 0.3);  /*Черный с прозрачностью*/
+	--basic-white-opacity: rgba(255, 255, 255, 0.3); /*Белый с прозрачностью*/
 	--basic-shadow: rgba(0, 1, 1, 0.2);
 }
 
@@ -134,7 +135,6 @@ img {
 .site-nav-link {
 	width: 200px;
 	padding-top: 14px;
-	
 }
 
 .site-nav-link:nth-child(1) {
@@ -352,7 +352,7 @@ img {
 }
 
 .advantage-item-other p {
-	 margin-top: 24px;
+	margin-top: 24px;
 }
 
 /*Search*/
@@ -372,10 +372,12 @@ img {
 
 .form-wrapper {
 	background-color: var(--basic-white);
-	position: absolute;
-	top: 204px;
+	top: 290px;
 	left: 316px;
 	width: 568px;
+	position: absolute;
+	z-index: 1;
+	display: none;
 }
 
 .search-lead {
@@ -406,14 +408,41 @@ img {
 	padding: 55px;
 }
 
+@keyframes reverse {
+	0% {
+        transform: translateY(-395px);
+    }
+  to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes reverse-up {
+	0% {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-395px);
+    }
+}
+
+.popap-show {
+	z-index: 1;
+	display: block;
+	animation-name: reverse;
+	animation-duration: 1s;
+}
+
+.popap-clouse {
+	
+	animation-name: reverse-up;
+	animation-duration: 1s;
+}
+
 .search-date-input[value] {
 	padding-left: 12px;
   padding-bottom: 0;
   padding-top: 0;
-}
-
-.search-date {
-	min-width: 121px;
 }
 
 .calendar {
@@ -486,9 +515,15 @@ img {
 .button-modal {
 	color: var(--basic-white);
 	background-color: var(--basic-dark);
-	width: 100%;
+	width: 568px;
 	height: 86px;
-	justify-self: center;
+	display: block;
+	box-sizing: border-box;
+	text-align: center;
+	padding-top: 30px;
+	position: absolute;
+	top: 205px;
+	left: 316px;
 }
 
 .button-modal:hover {
@@ -515,15 +550,15 @@ img {
 	background-color: var(--basic-light-active);
 }
 
-.button-modal:focus .button-text,
-.button-search:focus .button-text {
+.button-modal:active,
+.button-search:active {
 	mix-blend-mode: normal;
-	opacity: 0.3;
+	color: var(--basic-white-opacity);
 }
 
 .search-date-input {
-width: 346px;
-height: 38px;
+	width: 346px;
+	height: 38px;
 }
 
 .search-date,
@@ -545,8 +580,8 @@ height: 38px;
 }
 
 .search-date {
-	width: 100px;
 	margin-right: -9px;
+	min-width: 121px;
 }
 
 .search-date-input {
@@ -558,7 +593,6 @@ height: 38px;
 	width: 114px;
 	height: 38px;
 }
-
 
 .search-date-input:hover,
 .quantity-input:hover {
@@ -579,6 +613,11 @@ height: 38px;
 	width: 1199px;
 	height: 594px;
 	display: flex;
+	position: relative;
+}
+
+.map iframe {
+	position: absolute;
 }
 
 /*Catalog*/
@@ -659,7 +698,7 @@ height: 38px;
 	padding-bottom: 12px;
 }
 
- .filter-option label {
+.filter-option label {
  	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
@@ -731,7 +770,7 @@ height: 38px;
   bottom: 5px;
 }
 
- .filter-cost input {
+.filter-cost input {
  	background: transparent;
  	color: var(--basic-white);
  	text-transform: uppercase;
@@ -756,11 +795,11 @@ height: 38px;
 }
 
 .range-controls {
-	 height: 20px;
-	 padding-top: 20px;
-	 width: 316px;
-	 padding-top: 20px;
-	 position: relative;
+	height: 20px;
+	padding-top: 20px;
+	width: 316px;
+	padding-top: 20px;
+	position: relative;
 }
 
 .range-controls .scale {
@@ -798,6 +837,7 @@ height: 38px;
 }
                                                                                       
 /*Центрирование кнопки*/
+
 .filter-button {
 	display: flex;
 	padding-top: 15px;
@@ -916,11 +956,11 @@ height: 38px;
 	cursor: text;
 }
 
- .sort-text:hover {
+.sort-text:hover {
 	color: var(--basic-light);
 }
 
- .sort-text:active {
+.sort-text:active {
 	color: var(--basic-accent-black);
 	text-decoration: none;
 }
@@ -1072,10 +1112,7 @@ height: 38px;
 
 .catalog-hotels-button-more:active {
 	background-color: var(--basic-light-active);
-}
-
-.catalog-hotels-button-more:active .button-text {
-	opacity: 30%;
+	color: var(--basic-white-opacity);
 }
 
 .catalog-hotels-button-book {
@@ -1087,14 +1124,12 @@ height: 38px;
 }
 
 .catalog-hotels-button-book:active {
-	background-color: var(--basic-dark-active)
-}
-
-.catalog-hotels-button-book:active .button-text {
-	opacity: 30%;
+	background-color: var(--basic-dark-active);
+	color: var(--basic-white-opacity);
 }
 
 /*Footer*/
+
 .footer {
 	background-color: var(--basic-white);
 	color: var(--basic-accent-black);
@@ -1169,7 +1204,7 @@ height: 38px;
 	align-items: center;
 }
 
-.footer-copyright span{
+.footer-copyright span {
 	padding-right: 8px;
 	padding-left: 65px;
 }
