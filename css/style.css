@@ -18,6 +18,24 @@
  	font-style: normal;
 }
 
+@keyframes reverse {
+	0% {
+	transform: translateY(-395px);
+}
+  100% {
+	transform: translateY(0);
+}
+}
+
+@keyframes reverse-up {
+	0% {
+	transform: translateY(0);
+}
+  100% {
+  transform: translateY(-395px);
+}
+}
+
 :root {
 	--basic-accent-black: #000000;  /*чёрный подзаголовки*/
 	--basic-black: #333333;   /*чёрный текст*/
@@ -333,6 +351,12 @@ img {
 
  /*Advantage Other*/
 
+.advantage-other {
+	background-color: var(--basic-neutral);
+	position: relative;
+	z-index: 2;
+}
+
 .advantage-list-other {
 	margin: 0;
   padding: 0;
@@ -368,6 +392,9 @@ img {
   text-align: center;
   padding-top: 26px;
   padding-bottom: 110px;
+  position: relative;
+  z-index: 2;
+  background-color: var(--basic-white);
 }
 
 .form-wrapper {
@@ -408,35 +435,17 @@ img {
 	padding: 55px;
 }
 
-@keyframes reverse {
-	0% {
-        transform: translateY(-395px);
-    }
-  to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes reverse-up {
-	0% {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-395px);
-    }
-}
-
-.popap-show {
-	z-index: 1;
+.popup-show {
 	display: block;
 	animation-name: reverse;
 	animation-duration: 1s;
 }
 
-.popap-clouse {
-	
-	animation-name: reverse-up;
-	animation-duration: 1s;
+.popup-close {
+  transform: translateY(-395px);
+  animation-name: reverse-up;
+  display: block;
+  animation-duration: 1s;
 }
 
 .search-date-input[value] {
@@ -659,7 +668,7 @@ img {
 	padding: 0;
 }
 
-.flex-infr {
+.infrastructure {
 	width: 200px;	
 	margin: 0;
   padding: 0;
@@ -667,14 +676,14 @@ img {
   margin-right: 55px;
 }
 
-.flex-hause {
+.house {
   width: 200px;
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.flex-price {
+.price {
 	margin: 0;
   padding: 0;
   border: none;
@@ -694,7 +703,7 @@ img {
 	padding-bottom: 28px;
 }
 
-.flex-price legend {
+.price legend {
 	padding-bottom: 12px;
 }
 
@@ -1215,50 +1224,50 @@ img {
   background-color: var(--basic-light);
 }
 
-.social-tw {
+.social-twitter {
 	background-color: var(--basic-light);
 	display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.social-tw:hover {
+.social-twitter:hover {
 	background-color: var(--basic-light-hover);
 }
 
-.social-tw:active {
+.social-twitter:active {
 	background-color: var(--basic-light-active);
 	fill-opacity: 30%;
 }
 
-.social-fb {
+.social-facebook {
 	background-color: var(--basic-light);
 	display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.social-fb:hover {
+.social-facebook:hover {
 	background-color: var(--basic-light-hover);
 }
 
-.social-fb:active {
+.social-facebook:active {
 	background-color: var(--basic-light-active);
 	fill-opacity: 30%;
 }
 
-.social-yout {
+.social-youtube {
 	background-color: var(--basic-light);
 	display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.social-yout:hover {
+.social-youtube:hover {
 	background-color: var(--basic-light-hover);
 }
 
-.social-yout:active {
+.social-youtube:active {
 	background-color: var(--basic-light-active);
 	fill-opacity: 30%;
 }
